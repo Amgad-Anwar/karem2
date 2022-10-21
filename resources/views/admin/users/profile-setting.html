@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html class="loading dark-layout" lang="en" data-layout="dark-layout" data-textdirection="ltr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
+
+    <meta name="description" content=" ">
+
+    <meta name="keywords" content=" ">
+
+    <meta name="author" content="joinus">
+
+    <title>UPI - Admin panal</title>
+
+    <link rel="apple-touch-icon" href="app-assets/images/logo/logo.png">
+
+    <link rel="shortcut icon" type="image/x-icon" href="app-assets/images/logo/logo.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
+
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/charts/apexcharts.css">
+
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/extensions/toastr.min.css">
+
+    <link rel="stylesheet" type="text/css" href="app-assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="app-assets/css/bootstrap-extended.min.css">
+
+    <link rel="stylesheet" type="text/css" href="app-assets/css/colors.min.css">
+
+    <link rel="stylesheet" type="text/css" href="app-assets/css/components.min.css">
+
+    <link rel="stylesheet" type="text/css" href="app-assets/css/themes/dark-layout.min.css">
+
+    <link rel="stylesheet" type="text/css" href="app-assets/css/themes/bordered-layout.min.css">
+
+    <link rel="stylesheet" type="text/css" href="app-assets/css/themes/semi-dark-layout.min.css">
+
+    <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/menu-types/vertical-menu.min.css">
+
+    <link rel="stylesheet" type="text/css" href="app-assets/css/pages/dashboard-ecommerce.min.css">
+
+    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/charts/chart-apex.min.css">
+
+    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/extensions/ext-component-toastr.min.css">
+
+    <link rel="stylesheet" type="text/css" href="app-assets/css/pages/page-profile.min.css">
+
+    <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/menu-types/vertical-menu.min.css">
+
+    <link rel="stylesheet" type="text/css" href="app-assets/css/style.css">
+ </head>
+  <!-- END: Head-->
+
+  <!-- BEGIN: Body-->
+  <body class="vertical-layout vertical-menu-modern  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="">
+
+    <!-- BEGIN: Header-->
+    <nav class="header-navbar navbar navbar-expand-lg align-items-center floating-nav navbar-dark navbar-shadow container-xxl">
+      <div class="navbar-container d-flex content">
+        <div class="bookmark-wrapper d-flex align-items-center">
+          <ul class="nav navbar-nav d-xl-none">
+            <li class="nav-item"><a class="nav-link menu-toggle" href="#"><i class="ficon" data-feather="menu"></i></a></li>
+          </ul>
+        </div>
+        <ul class="nav navbar-nav align-items-center ms-auto">
+          <li class="nav-item dropdown dropdown-language"><a class="nav-link dropdown-toggle" id="dropdown-flag" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="flag-icon flag-icon-us"></i><span class="selected-language">English</span></a>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-flag">
+              <a class="dropdown-item" href="#" data-language="en"><i class="flag-icon flag-icon-us"></i> English</a>
+              <a class="dropdown-item" href="#" data-language="ar"><i class="flag-icon flag-icon-ar"></i> Arabic</a>
+            </div>
+          </li>
+          <li class="nav-item d-none d-lg-block"><a class="nav-link nav-link-style"><i class="ficon" data-feather="sun"></i></a></li>
+          <li class="nav-item nav-search"><a class="nav-link nav-link-search"><i class="ficon" data-feather="search"></i></a>
+            <div class="search-input">
+              <div class="search-input-icon"><i data-feather="search"></i></div>
+              <input class="form-control input" type="text" placeholder="Explore..." tabindex="-1" data-search="search">
+              <div class="search-input-close"><i data-feather="x"></i></div>
+              <ul class="search-list search-list-main"></ul>
+            </div>
+          </li>
+          <li class="nav-item dropdown dropdown-user">
+            <a class="nav-link dropdown-toggle dropdown-user-link" id="dropdown-user" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div class="user-nav d-sm-flex d-none">
+                <span class="user-name fw-bolder">Ahmed karem</span>
+                <span class="user-status">Admin</span>
+              </div>
+              <span class="avatar">
+                <img class="round" src="app-assets/images/avatars/me.jpeg" alt="avatar" height="40" width="40">
+                <span class="avatar-status-online"></span>
+              </span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-user">
+              <a class="dropdown-item" href="profile.html"><i class="me-50" data-feather="user"></i> Profile</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="login.html"><i class="me-50" data-feather="power"></i> Logout</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- END: Header-->
+
+
+    <!-- BEGIN: Main Menu-->
+    <div class="main-menu menu-fixed menu-dark menu-accordion menu-shadow" data-scroll-to-active="true">
+      <div class="navbar-header">
+        <ul class="nav navbar-nav flex-row">
+          <li class="nav-item me-auto"><a class="navbar-brand" href="index.html">
+            <span class="brand-logo">
+                <img src="app-assets/images/logo/logo.png ">
+            </span>
+              <h2 class="brand-text">UPI</h2></a></li>
+          <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pe-0" data-bs-toggle="collapse"><i class="d-block d-xl-none text-primary toggle-icon font-medium-4" data-feather="x"></i><i class="d-none d-xl-block collapse-toggle-icon font-medium-4  text-primary" data-feather="disc" data-ticon="disc"></i></a></li>
+        </ul>
+      </div>
+      <div class="shadow-bottom"></div>
+      <div class="main-menu-content">
+        <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+          <li class=" nav-item"><a class="d-flex align-items-center" href="index.html"><i data-feather="home"></i><span class="menu-title text-truncate" data-i18n="Dashboards">Add Data</span><span class="badge badge-light-warning rounded-pill ms-auto me-1">4</span></a>
+            <ul class="menu-content">
+              <li class="active">
+                <a class="d-flex align-items-center" href="#">
+                  <i data-feather="circle"></i>
+                  <span class="menu-item text-truncate" data-i18n="Organizational">Organizational Chart</span>
+                </a>
+              </li>
+              <li>
+                <a class="d-flex align-items-center" href="#">
+                  <i data-feather="circle"></i>
+                  <span class="menu-item text-truncate" data-i18n="advisory">advisory boards</span>
+                </a>
+              </li>
+              <li>
+                <a class="d-flex align-items-center" href="#">
+                  <i data-feather="circle"></i>
+                  <span class="menu-item text-truncate" data-i18n="Partners">Partners</span>
+                </a>
+              </li>
+              <li>
+                <a class="d-flex align-items-center" href="#">
+                  <i data-feather="circle"></i>
+                  <span class="menu-item text-truncate" data-i18n="Certificates">Certificates</span>
+                </a>
+                  <ul class="menu-content">
+                      <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Second Level">Certificate Categories</span></a>
+                      </li>
+                      <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Second Level">Certificate Details</span></a>
+                      </li>
+                  </ul>
+              </li>
+            </ul>
+          </li>
+          <li class=" navigation-header"><span data-i18n="Pages">Pages</span><i data-feather="more-horizontal"></i>
+          </li>
+             <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="user"></i><span class="menu-title text-truncate" data-i18n="User">Users</span></a></li>
+             <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="user-check"></i><span class="menu-title text-truncate" data-i18n="Review">Review</span></a></li>
+             <li class=" nav-item"><a class="d-flex align-items-center" href="chat.html"><i data-feather="message-square"></i><span class="menu-title text-truncate" data-i18n="Chat">Chat</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- END: Main Menu-->
+
+    <!-- BEGIN: Content-->
+    <div class="app-content content ">
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-body">
+            <div id="user-profile">
+                 <div class="row">
+                    <div class="col-12">
+                        <div class="card profile-header mb-2">
+                            <!-- profile cover photo -->
+                            <img class="card-img-top" src="app-assets/images/profile/user-uploads/timeline.jpg" alt="User Profile Image"/>
+                            <!--/ profile cover photo -->
+
+                            <div class="position-relative">
+                                <!-- profile picture -->
+                                <div class="profile-img-container d-flex align-items-center">
+                                    <div class="profile-img">
+                                        <img src="app-assets/images/avatars/me.jpeg" class="rounded img-fluid" alt="Card image"/>
+                                    </div>
+                                    <!-- profile title -->
+                                    <div class="profile-title ms-3">
+                                        <h2 class="text-white">Ahmed karem</h2>
+                                        <p class="text-white">Admin</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile-header-nav">
+                                <!-- navbar -->
+                                <nav class="navbar navbar-expand-md navbar-light justify-content-end justify-content-md-between w-100">
+                                    <button class="btn btn-icon navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                        <i data-feather="align-justify" class="font-medium-5"></i>
+                                    </button>
+
+                                    <!-- collapse  -->
+                                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                        <div class="profile-tabs d-flex justify-content-between flex-wrap mt-1 mt-md-0">
+                                            <ul class="nav nav-pills mb-0">
+                                                <li class="nav-item">
+                                                    <a class="nav-link fw-bold" href="profile.html">
+                                                        <span class="d-none d-md-block">Information</span>
+                                                        <i data-feather="rss" class="d-block d-md-none"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link fw-bold active" href="profile-setting.html">
+                                                        <span class="d-none d-md-block">Setting</span>
+                                                        <i data-feather="info" class="d-block d-md-none"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!--/ collapse  -->
+                                </nav>
+                                <!--/ navbar -->
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+                <section id="profile-info">
+                    <div class="row">
+                        <!-- left profile info section -->
+                        <div class="col-lg-12 col-12 order-2 order-lg-1">
+                            <!-- profile -->
+                            <div class="card">
+                                <div class="card-header border-bottom">
+                                    <h4 class="card-title">Profile Details</h4>
+                                </div>
+                                <div class="card-body py-2 my-25">
+                                    <!-- header section -->
+                                    <div class="d-flex">
+                                        <a href="#" class="me-25">
+                                            <img
+                                                    src="app-assets/images/avatars/me.jpeg"
+                                                    id="account-upload-img"
+                                                    class="uploadedAvatar rounded me-50"
+                                                    alt="profile image"
+                                                    height="100"
+                                                    width="100"
+                                            />
+                                        </a>
+                                        <!-- upload and reset button -->
+                                        <div class="d-flex align-items-end mt-75 ms-1">
+                                            <div>
+                                                <label for="account-upload" class="btn btn-sm btn-primary mb-75 me-75">Upload</label>
+                                                <input type="file" id="account-upload" hidden accept="image/*" />
+                                                <button type="button" id="account-reset" class="btn btn-sm btn-outline-secondary mb-75">Reset</button>
+                                                <p class="mb-0">Allowed file types: png, jpg, jpeg.</p>
+                                            </div>
+                                        </div>
+                                        <!--/ upload and reset button -->
+                                    </div>
+                                    <!--/ header section -->
+
+                                    <!-- form -->
+                                    <form class="validate-form mt-2 pt-50">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-6 mb-1">
+                                                <label class="form-label" for="accountFirstName">First Name</label>
+                                                <input type="text" class="form-control" id="accountFirstName" name="firstName" placeholder="Ahmed" value="Ahmed" data-msg="Please enter first name"/>
+                                            </div>
+                                            <div class="col-12 col-sm-6 mb-1">
+                                                <label class="form-label" for="accountLastName">Last Name</label>
+                                                <input
+                                                        type="text"
+                                                        class="form-control"
+                                                        id="accountLastName"
+                                                        name="lastName"
+                                                        placeholder="Karem"
+                                                        value="Karem"
+                                                        data-msg="Please enter last name"
+                                                />
+                                            </div>
+                                            <div class="col-12 col-sm-6 mb-1">
+                                                <label class="form-label" for="accountEmail">Email</label>
+                                                <input
+                                                        type="email"
+                                                        class="form-control"
+                                                        id="accountEmail"
+                                                        name="email"
+                                                        placeholder="Email"
+                                                        value="ak5464@gmail.com"
+                                                />
+                                            </div>
+                                            <div class="col-12 col-sm-6 mb-1">
+                                                <label class="form-label" for="accountUsername">username</label>
+                                                <input
+                                                        type="text"
+                                                        class="form-control"
+                                                        id="accountUsername"
+                                                        name="username"
+                                                        placeholder="username"
+                                                        value="username"
+                                                />
+                                            </div>
+                                            <div class="col-12 col-sm-12 mb-1">
+                                                <label class="form-label" for="accountPhoneNumber">Phone Number</label>
+                                                <input
+                                                        type="text"
+                                                        class="form-control account-number-mask"
+                                                        id="accountPhoneNumber"
+                                                        name="phoneNumber"
+                                                        placeholder="Phone Number"
+                                                        value="01207807796"
+                                                />
+                                            </div>
+                                            <div class="col-12 col-sm-6 mb-1">
+                                                <label class="form-label" for="accountPassword">Password</label>
+                                                <input type="Password" class="form-control" id="accountPassword" name="Password" placeholder="Your Password" />
+                                            </div>
+                                            <div class="col-12 col-sm-6 mb-1">
+                                                <label class="form-label" for="ConfirmPassword">Confirm Password</label>
+                                                <input type="password" class="form-control" id="ConfirmPassword" name="confirmpassword" placeholder="Confirm Password" />
+                                            </div>
+                                            <div class="col-12">
+                                                <button type="submit" class="btn btn-primary mt-1 me-1">Save changes</button>
+                                                <button type="reset" class="btn btn-outline-secondary mt-1">Discard</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <!--/ form -->
+                                </div>
+                            </div>
+
+                            <!-- deactivate account  -->
+                            <div class="card">
+                                <div class="card-header border-bottom">
+                                    <h4 class="card-title">Delete Account</h4>
+                                </div>
+                                <div class="card-body py-2 my-25">
+                                    <div class="alert alert-warning">
+                                        <h4 class="alert-heading">Are you sure you want to delete your account?</h4>
+                                        <div class="alert-body fw-normal">
+                                            Once you delete your account, there is no going back. Please be certain.
+                                        </div>
+                                    </div>
+
+                                    <form id="formAccountDeactivation" class="validate-form" onsubmit="return false">
+                                        <div class="form-check">
+                                            <input
+                                                    class="form-check-input"
+                                                    type="checkbox"
+                                                    name="accountActivation"
+                                                    id="accountActivation"
+                                                    data-msg="Please confirm you want to delete account"
+                                            />
+                                            <label class="form-check-label font-small-3" for="accountActivation">
+                                                I confirm my account deactivation
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <button type="submit" class="btn btn-danger deactivate-account mt-1">Deactivate Account</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="sidenav-overlay"></div>
+    <div class="drag-target"></div>
+
+    <!-- BEGIN: Footer-->
+    <footer class="footer footer-static footer-light">
+      <p class="clearfix mb-0"><span class="float-md-start d-block d-md-inline-block mt-25">COPYRIGHT  &copy; 2021<a class="ms-25" href="#" target="_blank">UPI Academy</a><span class="d-none d-sm-inline-block">, All rights Reserved</span></span></p>
+    </footer>
+    <button class="btn btn-primary btn-icon scroll-top" type="button"><i data-feather="arrow-up"></i></button>
+    <!-- END: Footer-->
+
+    <!-- Modal Add -->
+    <div class="modal fade text-start" id="inlineForm" tabindex="-1" aria-labelledby="myModalLabel33" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel33">Add new Organizer</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="#">
+                    <div class="modal-body">
+                        <div class="mb-1 mb-sm-0">
+                            <label for="formFile" class="form-label">Upload Member Photo</label>
+                            <input class="form-control" type="file" id="formFile" />
+                        </div>
+                        <label>Member Name </label>
+                        <div class="mb-1">
+                            <input type="text" placeholder="name" class="form-control" />
+                        </div>
+                        <label>Member Jop </label>
+                        <div class="mb-1">
+                            <input type="text" placeholder="jop" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal edit Member-->
+    <div class="modal fade text-start" id="inlineForm4" tabindex="-1" aria-labelledby="myModalLabel4" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel4">Edit Organizer</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="#">
+                    <div class="modal-body">
+                        <div class="mb-1 mb-sm-0">
+                            <label for="formFile3" class="form-label">Upload Organizer Photo</label>
+                            <input class="form-control" type="file" id="formFile3" />
+                        </div>
+                        <label>Organizer Name </label>
+                        <div class="mb-1">
+                            <input type="text" value="name" class="form-control" />
+                        </div>
+                        <label>Organizer Jop </label>
+                        <div class="mb-1">
+                            <input type="text" value="jop" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="app-assets/vendors/js/vendors.min.js"></script>
+    <!-- BEGIN Vendor JS-->
+
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="app-assets/vendors/js/charts/apexcharts.min.js"></script>
+    <script src="app-assets/vendors/js/extensions/toastr.min.js"></script>
+    <!-- END: Page Vendor JS-->
+
+    <!-- BEGIN: Theme JS-->
+    <script src="app-assets/js/core/app-menu.min.js"></script>
+    <script src="app-assets/js/core/app.min.js"></script>
+    <script src="app-assets/js/scripts/customizer.min.js"></script>
+    <!-- END: Theme JS-->
+
+    <!-- BEGIN: Page JS-->
+    <script src="app-assets/js/scripts/pages/dashboard-ecommerce.min.js"></script>
+    <!-- END: Page JS-->
+
+    <script src="app-assets/js/scripts/components/components-modals.min.js"></script>
+
+    <script src="app-assets/js/scripts/pages/page-account-settings-account.min.js"></script>
+
+    <script src="app-assets/vendors/js/extensions/sweetalert2.all.min.js"></script>
+    <script src="app-assets/vendors/js/forms/validation/jquery.validate.min.js"></script>
+
+    <script>
+      $(window).on('load',  function(){
+        if (feather) {
+          feather.replace({ width: 14, height: 14 });
+        }
+      })
+    </script>
+  </body>
+</html>
